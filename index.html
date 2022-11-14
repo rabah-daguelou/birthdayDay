@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Quel jour correspond à cette date </title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="style.css">
+    <script src="index.js" defer></script>
+</head>
+
+<body>
+    <h1> Trouver le jour d'une date donnée </h1>
+
+    <form id="formular">
+        <div class="birthday">
+
+            <div class="birthdayDay space" >
+                <label for="birthdayDay"> Jour </label>
+                <input type="number" id="birthdayDay" min="1" required class="form-control">
+            </div>
+            
+            <div class="birthdayMonth space">
+                <label for="birthdayMonth"> Mois </label>
+                <input type="number" id="birthdayMonth" required class="form-control">
+            </div>
+           
+            <div class="birthdayYear space">
+                <label for="birthdayYear"> Année</label>
+                <input type="number" id="birthdayYear"  required class="form-control">
+            </div>
+            
+        </div>
+        
+        
+    </form>
+<button id="submitButton" class="form-control"> Envoyer </button>
+<button id="resetButton" class="form-control"> Recommencer </button>
+<br>
+    
+    <ul id="messages"></ul>
+    <p id="result"></p>
+
+</body>
+
+</html>
