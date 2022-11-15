@@ -39,10 +39,14 @@ setInterval(() => {
   let monthString=birthdayM.value.toString()
   
   if (dayString.length==2) {
-    birthdayM.focus()
+    birthdayM.focus();
+    dayString=parseInt(dayString);
+    
   }
   if (monthString.length==2) {
     birthdayY.focus()
+    monthString=parseInt(monthString);
+    
   }
 }, 10);
 
