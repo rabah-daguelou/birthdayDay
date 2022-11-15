@@ -40,11 +40,11 @@ let formular=document.getElementById('formular');
 setInterval(() => {
   let dayString=birthdayD.value.toString()
   let monthString=birthdayM.value.toString()
-  if (dayString.length==2) {
+  if (dayString.length==2 && birthdayD===document.activeElement) {
     birthdayM.focus();
     dayString=parseInt(dayString);
   } 
-  if (monthString.length==2) {
+  if (monthString.length==2 && birthdayM===document.activeElement) {
     birthdayY.focus()
     monthString=parseInt(monthString);
   }
