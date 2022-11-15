@@ -52,10 +52,8 @@ let intervalFunction= function(){
     monthString=parseInt(monthString);
     console.log (document.activeElement)
   }
-  if (birthdayY===document.activeElement){
-    if(yearString.length===4){
+  if (birthdayY===document.activeElement && yearString.length===4){
     submitButton.focus()
-  }
     clearInterval(myInterval)
   }
   
