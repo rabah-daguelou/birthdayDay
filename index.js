@@ -100,7 +100,7 @@ submitButton.addEventListener("click", () =>{
   
   if (birthdayYear<1900 || birthdayYear > todayYear) {
     let message=document.createElement('li')
-    messages.appendChild(message).innerHTML=" L'année' doit être comprise entre 1900 et " + todayYear + "!"
+    messages.appendChild(message).innerHTML=" L'année doit être comprise entre 1900 et " + todayYear + "!"
     birthdayY.style.border="2px dashed red";
     resetButton.style.display='block';
     result.innerHTML="Merci de recommencer SVP !"
