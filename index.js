@@ -41,6 +41,8 @@ let intervalFunction= function(){
   myInterval=setInterval(() => {
   let dayString=birthdayD.value.toString()
   let monthString=birthdayM.value.toString()
+  let yearString=birthdayY.value.toString()
+
   if (dayString.length==2 && birthdayD===document.activeElement) {
     birthdayM.focus();
     dayString=parseInt(dayString);
@@ -51,9 +53,12 @@ let intervalFunction= function(){
     console.log (document.activeElement)
   }
   if (birthdayY===document.activeElement){
-    clearInterval(myInterval)
-    console.log('fini')
+    if(yearString.length===4){
+    submitButton.focus()
   }
+    clearInterval(myInterval)
+  }
+  
 }, 10);
 }
 
@@ -263,7 +268,12 @@ const myFunction= function(){
   let dateName = daysNames[modulo];
 
   console.log("Le jour est:", dateName);
-  
+  if(birthdayDay<10){
+    birthdayDay='0'+birthdayDay
+  }
+  if(birthdayMonth<10){
+    birthdayMonth='0'+birthdayMonth
+  }
   result.innerHTML=` Le ${birthdayDay}/ ${birthdayMonth}/${birthdayYear} était un <span>${dateName}</span>`
   
   submitButton.style.display='none'
