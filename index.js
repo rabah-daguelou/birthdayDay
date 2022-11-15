@@ -1,3 +1,4 @@
+
 // Mes variables
 let result=document.getElementById('result');
 const messages=document.getElementById('messages')
@@ -32,18 +33,22 @@ let numberOfTotalDays;
 let submitButton = document.getElementById("submitButton");
 
 let formular=document.getElementById('formular');
-let dayString=birthdayD.value.toString()
-let monthString=birthdayM.value.toString()
+
+
+
 // Créer le focus des inputs 
 setInterval(() => {
+  let dayString=birthdayD.value.toString()
+  let monthString=birthdayM.value.toString()
   if (dayString.length==2) {
     birthdayM.focus();
     dayString=parseInt(dayString);
-  }
+  } 
   if (monthString.length==2) {
     birthdayY.focus()
     monthString=parseInt(monthString);
   }
+  
 }, 10);
 
 // Clique sur envoyer
