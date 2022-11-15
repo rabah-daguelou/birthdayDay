@@ -34,10 +34,11 @@ let submitButton = document.getElementById("submitButton");
 
 let formular=document.getElementById('formular');
 
-
-
+console.log (document.activeElement)
+let myInterval;
 // Créer le focus des inputs 
-setInterval(() => {
+let intervalFunction= function(){
+  myInterval=setInterval(() => {
   let dayString=birthdayD.value.toString()
   let monthString=birthdayM.value.toString()
   if (dayString.length==2 && birthdayD===document.activeElement) {
@@ -47,10 +48,16 @@ setInterval(() => {
   if (monthString.length==2 && birthdayM===document.activeElement) {
     birthdayY.focus()
     monthString=parseInt(monthString);
+    console.log (document.activeElement)
   }
-  
+  if (birthdayY===document.activeElement){
+    clearInterval(myInterval)
+    console.log('fini')
+  }
 }, 10);
+}
 
+intervalFunction()
 // Clique sur envoyer
 submitButton.addEventListener("click", () =>{
   birthdayDay = parseInt(birthdayD.value);
