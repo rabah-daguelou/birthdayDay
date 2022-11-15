@@ -19,17 +19,17 @@
 
             <div class="birthdayDay space" >
                 <label for="birthdayDay"> Jour </label>
-                <input autofocus type="number" id="birthdayDay" min="1" required class="form-control">
+        <input autofocus type="text" id="birthdayDay" minlength="2" maxlength="2" pattern="[0-9]" inputmode="numeric" required class="form-control">
             </div>
             
             <div class="birthdayMonth space">
                 <label for="birthdayMonth"> Mois </label>
-                <input type="number" id="birthdayMonth" required class="form-control">
+                <input type="text" id="birthdayMonth" required class="form-control" minlength="2" maxlength="2" pattern="[0-9]" inputmode="numeric">
             </div>
            
             <div class="birthdayYear space">
                 <label for="birthdayYear"> Année</label>
-                <input type="number" id="birthdayYear" min="1900" max="2022"  required class="form-control">
+                <input type="text" id="birthdayYear" min="1900" max="2022" minlength="4" maxlength="4" pattern="[0-9]" inputmode="numeric" required class="form-control">
             </div>
             
         </div>

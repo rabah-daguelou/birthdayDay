@@ -34,7 +34,7 @@ let submitButton = document.getElementById("submitButton");
 
 let formular=document.getElementById('formular');
 
-console.log (document.activeElement)
+
 let myInterval;
 // Créer le focus des inputs 
 let intervalFunction= function(){
