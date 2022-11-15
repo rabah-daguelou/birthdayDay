@@ -15,10 +15,6 @@ resetButton.style.display='none';
 
   console.log("Date d'aujourd'hui:", todayDay, todayMonth, todayYear);
 
-
-//
-
-
 let birthdayDay;
 let birthdayMonth;
 let birthdayYear;
@@ -37,6 +33,18 @@ let submitButton = document.getElementById("submitButton");
 
 let formular=document.getElementById('formular');
 
+// Créer le focus des inputs 
+setInterval(() => {
+  let dayString=birthdayD.value.toString()
+  let monthString=birthdayM.value.toString()
+  
+  if (dayString.length==2) {
+    birthdayM.focus()
+  }
+  if (monthString.length==2) {
+    birthdayY.focus()
+  }
+}, 10);
 
 // Clique sur envoyer
 submitButton.addEventListener("click", () =>{
